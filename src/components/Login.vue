@@ -8,7 +8,7 @@
       <i-col span="7" class="login-box">
         <div class="login-container">
           <div class="login-header">
-            <p>欢迎登陆</p>
+            <p>欢迎登录</p>
           </div>
           <div class="form-box">
             <Form ref="formInline" :model="formDate" :rules="ruleInline">
