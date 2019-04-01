@@ -27,14 +27,18 @@
         </div>
         <!-- 内容 -->
         <div class="seckill-content">
-          <div class="seckill-item" v-for="(item, index) in seckills.goodsList" :key="index">
+          <div class="seckill-item"
+               v-for="(item, index) in seckills.goodsList"
+               :key="index">
             <div class="seckill-item-img">
               <router-link to="/goodsList"><img :src="item.img"></router-link>
             </div>
             <div class="seckill-item-info">
               <p>{{item.intro}}</p>
               <p>
-                <span class="seckill-price text-danger"><Icon type="social-yen"></Icon>{{item.price}}</span>
+                <span class="seckill-price text-danger">
+                  <Icon type="social-yen"></Icon>{{item.price}}
+                </span>
                 <span class="seckill-old-price"><s>{{item.realPrice}}</s></span>
               </p>
             </div>
@@ -46,34 +50,43 @@
         <div class="item-class-head">
           <span class="item-class-title">{{computer.title}}</span>
           <ul>
-            <li v-for="(item, index) in computer.link" :key="index">
+            <li v-for="(item, index) in computer.link"
+                :key="index">
               <router-link to="/goodsList">{{item}}</router-link>
             </li>
           </ul>
         </div>
-        <div class="item-class-content" v-for="(item, index) in computer.detail" :key="index">
+        <div class="item-class-content"
+             v-for="(item, index) in computer.detail"
+             :key="index">
           <div class="item-content-top">
             <div class="item-big-img">
               <router-link to="/goodsList">
-                <img :src="item.bigImg" alt="">
+                <img :src="item.bigImg"
+                     alt="">
               </router-link>
             </div>
             <div class="item-four-img">
-              <div class="item-four-detail" v-for="(subItem, index) in item.itemFour" :key="index">
+              <div class="item-four-detail"
+                   v-for="(subItem, index) in item.itemFour"
+                   :key="index">
                 <div class="item-four-detail-text">
                   <p class="pt_bi_tit">{{subItem.title}}</p>
                   <p class="pt_bi_promo">{{subItem.intro}}</p>
                 </div>
                 <div class="item-four-detail-img">
                   <router-link to="/goodsList">
-                    <img :src="subItem.img" alt="">
+                    <img :src="subItem.img"
+                         alt="">
                   </router-link>
                 </div>
               </div>
             </div>
           </div>
           <div class="item-content-bottom">
-            <div class="item-content-bottom-img" v-for="(subImg, index) in item.itemContent" :key="index">
+            <div class="item-content-bottom-img"
+                 v-for="(subImg, index) in item.itemContent"
+                 :key="index">
               <router-link to="/goodsList">
                 <img :src="subImg">
               </router-link>
@@ -86,32 +99,41 @@
         <div class="item-class-head item-class-eat-head">
           <span class="item-class-title">{{eat.title}}</span>
           <ul>
-            <li v-for="(item, index) in eat.link" :key="index">
+            <li v-for="(item, index) in eat.link"
+                :key="index">
               <router-link to="/goodsList">{{item}}</router-link>
             </li>
           </ul>
         </div>
-        <div class="item-class-content" v-for="(item, index) in eat.detail" :key="index">
+        <div class="item-class-content"
+             v-for="(item, index) in eat.detail"
+             :key="index">
           <div class="item-content-top">
             <div class="item-big-img">
-              <img :src="item.bigImg" alt="">
+              <img :src="item.bigImg"
+                   alt="">
             </div>
             <div class="item-four-img">
-              <div class="item-four-detail" v-for="(subItem, index) in item.itemFour" :key="index">
+              <div class="item-four-detail"
+                   v-for="(subItem, index) in item.itemFour"
+                   :key="index">
                 <div class="item-four-detail-text">
                   <p class="pt_bi_tit pt_bi_tit-eat">{{subItem.title}}</p>
                   <p class="pt_bi_promo">{{subItem.intro}}</p>
                 </div>
                 <div class="item-four-detail-img">
                   <router-link to="/goodsList">
-                    <img :src="subItem.img" alt="">
+                    <img :src="subItem.img"
+                         alt="">
                   </router-link>
                 </div>
               </div>
             </div>
           </div>
           <div class="item-content-bottom">
-            <div class="item-content-bottom-img" v-for="(subImg, index) in item.itemContent" :key="index">
+            <div class="item-content-bottom-img"
+                 v-for="(subImg, index) in item.itemContent"
+                 :key="index">
               <router-link to="/goodsList">
                 <img :src="subImg">
               </router-link>
@@ -155,8 +177,8 @@ export default {
     ...mapMutations(['REDUCE_SECKILLS_TIME'])
   },
   computed: {
-    ...mapState([ 'seckills', 'computer', 'eat' ]),
-    ...mapGetters([ 'seckillsHours', 'seckillsMinutes', 'seckillsSeconds' ])
+    ...mapState(['seckills', 'computer', 'eat']),
+    ...mapGetters(['seckillsHours', 'seckillsMinutes', 'seckillsSeconds'])
   },
   components: {
     Sreach,
@@ -172,7 +194,7 @@ export default {
 
 <style scoped>
 .container {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 .content {
   width: 1008px;
@@ -452,5 +474,4 @@ export default {
   margin-left: -15px;
   transition: margin-left 0.3s;
 }
-/*****************************商品专栏结束*****************************/
 </style>
