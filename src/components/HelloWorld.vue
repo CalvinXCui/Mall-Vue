@@ -1,3 +1,4 @@
+//欢迎页面
 <template>
   <div class="hello">
     <Button>Default</Button>

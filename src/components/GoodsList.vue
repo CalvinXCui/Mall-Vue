@@ -1,3 +1,4 @@
+// 精选商品页面
 <template>
   <div>
     <Sreach></Sreach>
