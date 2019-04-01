@@ -1,4 +1,4 @@
-###电子商城展示
+### 电子商城展示
 # MALL-VUE
 [![Build Status](https://travis-ci.com/PowerDos/Mall-Vue.svg?branch=master)](https://travis-ci.com/PowerDos/Mall-Vue)
 [![VueJS Version](https://img.shields.io/badge/VueJS-v2.5-green.svg?style=flat-square)](https://vuejs.org/)
